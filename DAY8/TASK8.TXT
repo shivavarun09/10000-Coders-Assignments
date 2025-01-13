@@ -1,0 +1,8 @@
+Assignment
+Techstack : html
+Topic :  Meta tags, favicon, semantic tags
+Date: 2- 01-2025
+Deadline : As soon as Possible 
+
+
+ Task : Create webpage using all the previous classes

@@ -1,0 +1,8 @@
+Assignment
+Techstack : html
+Topic :   Patterns, fieldset and legend, text area, entities
+Date: 7- 01-2025
+Deadline : As soon as Possible 
+
+
+ Task : sign up , login, forget password login forms linked with each other

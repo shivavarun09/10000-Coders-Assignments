@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration form</title>
+    <style>
+    
+      table {
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+      }
+      form {
+        justify-self: center;
+        margin-top: 50px;
+      }
+    
+      .sbutton {
+        background-color: blue;
+        color: white;
+      }
+      form [type="submit"] {
+        background-color: black;
+        border: none;
+        padding: 5px 15px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      form [type="submit"]:hover {
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+      }
+      form [type="submit"]:active {
+        background-color: white;
+        color: black;
+      }
+      .formcontainer{
+        display: flexbox;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="formcontainer">
+      <form  action="https://formspree.io/f/xpwwoyyy" method="POST" >
+        <table>
+          <th>Registration Form</th>
+          <tr>
+            <td><label for="name">Full Name </label></td>
+            <td><input type="text" name="Name" id="name" required /></td>
+          </tr>
+          <tr>
+            <td><label for="dob"> Date of Birth</label></td>
+            <td>
+              <input type="date" name="Date-of-birth" id="dob" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mobno">Mobile No</label></td>
+            <td>
+              <input
+                type="text"
+                name="Mobile-no"
+                id="mobno"
+                required
+                pattern="[6-9][0-9]{9}"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mail"> Email Id</label></td>
+            <td>
+              <input
+                type="mail"
+                name="E-mail"
+                id="mail"
+                required
+                pattern="[a-z0-9.-+%]+@[a-z0-9.-]+\.[a-z]{2,}"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="">Gender</label></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="Gender" id="gender" value="Male" /><label
+                for="men"
+                >Male</label
+              ><input
+                type="radio"
+                name="Gender"
+                id="gender"
+                value="Female"
+              /><label for="fe">Female</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input class="sbutton" type="submit" value="submit" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

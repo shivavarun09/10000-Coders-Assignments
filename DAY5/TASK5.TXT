@@ -1,0 +1,10 @@
+Techstack : Html
+Topic: -  Row span, colspan,images, anchor tag attributes
+
+
+ Date: 27-12-2024
+Deadline: 2 Days
+
+  
+Task:- 
+Task: frontend, backend, mean, mern technology using images

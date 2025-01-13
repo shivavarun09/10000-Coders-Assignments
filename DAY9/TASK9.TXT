@@ -1,0 +1,8 @@
+Assignment
+Techstack : html
+Topic :  forms
+Date: 3-1-2025
+Deadline : As soon as Possible 
+
+
+ Task : create a registration form using all input types.

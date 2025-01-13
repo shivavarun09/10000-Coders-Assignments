@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email and Password</title>
+  <style>
+    
+    table {
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+    }
+    form {
+      justify-self: center;
+      margin-top: 50px;
+    }
+  
+    form [type="submit"] {
+      background-color: black;
+      border: none;
+      padding: 5px 15px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form [type="submit"]:hover {
+      box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    }
+    form [type="submit"]:active {
+      background-color: white;
+      color: black;
+    }
+    .formcontainer{
+      display: flexbox;
+    }
+  </style>
+</head>
+<body>
+  <div class="fromcontainer">
+    <form  action="https://formspree.io/f/xpwwoyyy" method="POST" >
+      <table>
+  
+        <tr>
+          <td><label for="mail">Email</label></td>
+          <td><input type="email" name="Email" id="mail" required pattern="[a-z0-9]+@[a-z]+/.[a-z]{2,}"></td>
+        </tr>
+        <tr>
+          <td><label for="pass">Password</label></td>
+          <td><input type="password" name="Password" id="pass" required pattern="(?=.*[a-z])(?=.*[A-z])(?=.*[0-9])(?=[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}"></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Submit"></td>
+        </tr>
+      </form>
+      </table>
+    
+  </div>
+  
+
+</body>
+</html>

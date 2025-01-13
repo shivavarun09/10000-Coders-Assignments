@@ -1,0 +1,8 @@
+Assignment
+Techstack : html
+Topic :  Form attributes, drop down menu, datalist.
+Date: 6-1-2025
+Deadline : As soon as Possible 
+
+
+ Task : create a login form with email and password. When you click the submit button you need to get the mail with the entered email and password to your mail id

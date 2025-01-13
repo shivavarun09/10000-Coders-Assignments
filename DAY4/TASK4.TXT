@@ -1,0 +1,8 @@
+Assignment
+Techstack : Html
+Topic: -  tables, table attributes, vs code download, uses of vs code, shortcuts of keyboard
+ Date: 24-12-2024
+Deadline: 2 Days
+
+  
+Task:-  web page of vs code and it's features, emmets symbol and description table, shortcuts of keyboard and description table.
