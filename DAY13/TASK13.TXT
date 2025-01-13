@@ -1,0 +1,8 @@
+Assignment
+Techstack : 
+Topic: - git process 2(without READ.Me file)
+Date: 09-01-2025
+Deadline: 2 Days
+
+  
+Task:- upload all html tasks in one repository

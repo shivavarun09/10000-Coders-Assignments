@@ -1,0 +1,8 @@
+Assignment
+Techstack : Git
+Topic :  git and how to deploy the code
+Date: 6-1-2025
+Deadline : As soon as Possible 
+
+
+ Task : deploy any code in git and send the screenshot of git after pushing the files
