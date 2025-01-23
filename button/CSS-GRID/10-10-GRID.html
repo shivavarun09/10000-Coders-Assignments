@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS GRID</title>
+  <style>
+    *{
+      border-color: red;
+      border-width: 1px;
+    }
+    .container{
+      display: grid;
+      grid-template-rows: 100px 100px 100px 100px 100px;
+      grid-template-columns:  minmax(100px,220px) 100px 100px 100px 100px;
+      gap: 4px;
+  /* you can use gridgap also*/
+    }
+    
+    .item1{
+      grid-area: 1/1/4/6;
+      background-color: aqua;
+    }
+    .item2{
+      grid-area: 4/2/6/1 ;
+      background-color: red;
+    }
+    .item3{
+      grid-area: 4/2/6/6 ;
+      z-index: -1;
+      background-color:blue;
+    }
+    .item4{
+      grid-area: 3/2/5/5;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item1">item1</div>
+    <div class="item2">item2</div>
+    <div class="item3">item3</div>
+    <div class="item4">item4</div>
+    
+   <div></div>
+  </div>
+</body>
+</html>
