@@ -42,11 +42,11 @@
   
         <tr>
           <td><label for="mail">Email</label></td>
-          <td><input type="email" name="Email" id="mail" required pattern="[a-z0-9]+@[a-z]+/.[a-z]{2,}"></td>
+          <td><input type="email" name="Email" id="mail" pattern="[a-zA-z0-9.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required></td>
         </tr>
         <tr>
           <td><label for="pass">Password</label></td>
-          <td><input type="password" name="Password" id="pass" required pattern="(?=.*[a-z])(?=.*[A-z])(?=.*[0-9])(?=[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}"></td>
+          <td><input type="password" name="Password" id="pass"  pattern="^(?=.*[a-z])(?=.*[A-z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$" required></td>
         </tr>
         <tr>
           <td><input type="submit" value="Submit"></td>
