@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box model</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        margin: 10%;
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+      .box{
+        border-style: groove;
+        margin: 10%;
+        padding: 1%;
+        width: auto;
+        height: auto;
+      }
+      #margin,
+      #padding {
+        border: 1px dashed black !important;
+      }
+      #content{
+        background-color: lightblue;
+      }
+      #padding{
+        background-color: lightgreen;
+      }
+      #border{
+        background-color: lightyellow;
+      }
+      #margin{
+        background-color: bisque;
+      }
+    #margin:hover + #border{
+background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="margin">
+      Margin
+      <div class="box" id="border">
+        Border
+        <div class="box" id="padding">
+          Padding
+          <div class="box" id="content">Content</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+header {
+  position: fixed;
+  width: 100%;
+}
+nav {
+  display: flex;
+
+  justify-content: space-between;
+  background-color: whitesmoke;
+  padding: 5px;
+
+  height: 60px;
+  max-height: auto;
+  align-items: center;
+}
+.left-sec {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  flex: 7.5 10; /* takes 75% width space of nav bar and shrinks 10times faster (i.e flex shrink) */
+}
+.c-logo{
+  width: 100%;
+  border-radius: 50%;
+  margin: 5%;
+  align-self: flex-end;
+  cursor: pointer;
+}
+.company-name{
+  align-content: center;
+  color:gray;
+  font: 20px solid thin;
+}
+.c-name{
+  align-self: flex-end;
+  font: 18px blue ;
+  text-align: start;
+  margin-left: 1%;
+}
+.right-sec {
+  flex: 2.5 0 0;  /* takes 25% width space of nav bar and no shrink and grow (i.e 0 and 0 values) */
+
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+  cursor: pointer;
+}
+a{
+  font: 15px blue ;
+  text-decoration: none;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #dishes{
+      display: flex;
+    /*  grid-template-columns: repeat(4,20%);
+    justify-content: center;
+      margin: auto;
+      column-gap: 2%;
+      row-gap: 2%;*/
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+     row-gap: 5%;
+     column-gap: 5%;
+      flex: 1;
+
+    }
+  .dish-image{
+    width: 100%;
+    height: 200px;
+    border-radius: 5%;
+  }
+  .dish-name{
+    font-size: 22px;
+    color: chocolate ;
+    text-align: center;
+    font-weight: 450;
+  }
+  .dish-heading{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 4%;
+    color: darkslategrey;
+  }
+
+  </style>
+</head>
+<body>
+  
+  <p class="dish-heading">Our Signature Dishes</p>
+  <section id="dishes">
+    <div class="dish">
+      <div ><img class="dish-image" src="dish-images/Aloo Kurma.jpg" alt=""></div>
+      <div class="dish-name">Aloo Kurma</div>
+    </div>
+    <div class="dish">
+      <div ><img class="dish-image" src="dish-images/BendakayaPulusu.jpg" alt=""></div>
+      <div class="dish-name">Bendakaya Pulusu</div>
+    </div>
+
+    <div class="dish">
+      <div ><img class="dish-image" src="dish-images/Chepala Pulusu.jpg" alt=""></div>
+      <div class="dish-name">Chepala Pulusu</div>
+    </div>
+
+    <div class="dish">
+      <div ><img class="dish-image" src="dish-images/Gongura Mamsam.jpg" alt=""></div>
+      <div class="dish-name">Gongura Mamsam</div>
+    </div>
+
+    <div class="dish">
+      <div ><img class="dish-image" src="dish-images/Kodi Kura.jpg" alt=""></div>
+      <div class="dish-name">Kodi Kura</div>
+    </div>
+
+    <div class="dish">
+      <div ><img class="dish-image" src="dish-images/PappuCharu.jpg" alt=""></div>
+      <div class="dish-name">Pappu Charu</div>
+    </div>
+
+    <div class="dish">
+      <div ><img class="dish-image" src="dish-images/RoyyalaIguru.jpg" alt=""></div>
+      <div class="dish-name">Royyala Iguru</div>
+    </div>
+
+    <div class="dish">
+      <div ><img class="dish-image" src="dish-images/Gutti Vankaya Curry.jpg" alt=""></div>
+      <div class="dish-name">Gutti Vankaya Curry</div>
+    </div>
+
+  
+  </section>
+</body>
+</html>

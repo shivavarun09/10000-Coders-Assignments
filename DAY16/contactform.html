@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .contact-form h3 {
+        font-size: 22px;
+        font-weight: 400;
+      }
+      .contact-msg {
+        font: 20px;
+      }
+      .contact-address {
+        font: 20px bold thin;
+        color: springgreen;
+      }
+      form input,
+      button {
+        display: block;
+        border: none;
+
+        width: 100%;
+
+        margin: 1% 0;
+        padding: 1%;
+      }
+      input[type="datetime-local"] {
+        background-color: lightgray;
+      }
+      form button {
+        font: 12px bold;
+        background-color: lightgray;
+
+        width: 20%;
+        cursor: pointer;
+        transition: box-shadow 0.2s;
+      }
+      form button:hover {
+        box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+      }
+      form button:active {
+        border-bottom: 1px black solid;
+      }
+      .contact-form {
+        margin: 5% 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact-form">
+      <h3>Contact Us</h3>
+      <p class="contact-msg">
+        We offer full-service catering for any event, large or small. We
+        understand your needs and we will cater the food to satisfy the biggerst
+        criteria of them all, both look and taste. Do not hesitate to contact
+        us.
+      </p>
+      <p class="contact-address">
+        Telugu Ruchulu Catering , Hyderabad, Telangana.
+      </p>
+      <form action="https://formspree.io/f/xpwwoyyy" method="POST">
+        <input type="text" name="Name" id="" placeholder="Name" />
+        <input
+          type="text"
+          name="How many People"
+          id=""
+          placeholder="How many people"
+          pattern="\d*"
+        />
+        <input type="datetime-local" name="datetime-local" id="" />
+
+        <input
+          type="text"
+          name="Message \ Special requirements"
+          id=""
+          placeholder="Message \ Special requirements"
+        />
+        <button>SEND MESSAGE</button>
+      </form>
+    </div>
+  </body>
+</html>

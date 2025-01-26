@@ -1,0 +1,48 @@
+.contact-form h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 2%;
+  text-align: start;
+}
+.contact-msg,.contact-address,.contact-form h3 {
+  font: 20px;
+  margin: 2%;
+  margin-left: 0;
+}
+.contact-form h3{
+  font: 25px solid thin;
+}
+.contact-address {
+  font: 20px bold thin;
+  color: black;
+}
+form input,
+button {
+  display: block;
+  border: none;
+
+  width: 100%;
+
+  margin: 1% 0;
+  padding: 1%;
+}
+input[type="datetime-local"] {
+  background-color: lightgray;
+}
+form button {
+  font: 12px bold;
+  background-color: lightgray;
+
+  width: 20%;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+form button:hover {
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+}
+form button:active {
+  border-bottom: 1px black solid;
+}
+.contact-form {
+  margin: 5% 5%;
+}
