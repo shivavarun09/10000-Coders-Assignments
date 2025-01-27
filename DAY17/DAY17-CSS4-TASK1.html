@@ -10,51 +10,58 @@
         margin: 0;
         padding: 0;
       }
-      body {
+      .container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        width: 100vw;
       }
-      .container{
-        display: flexbox;
-      }
+
       table {
-        width: 500px;
-        height: 500px;
+        width: 50%;
+        height: 80%;
         vertical-align: middle;
         border-collapse: collapse;
       }
       td {
-        width: 10%;
-        height: 10%;
-    
+        width: 12%;
+        height: 12%;
+
         border-style: groove;
       }
-      .row1 span,.row2 span,  .row7 span,  .row8 span{
+      .row1 span,
+      .row2 span,
+      .row7 span,
+      .row8 span {
         display: grid;
-        font-size: 120% ;
+        font-size: 180%;
         justify-content: center;
         align-content: center;
         cursor: pointer;
         transition: font-size 0.25s;
       }
-      span:hover{
-        font-size: 210%;
-
+      span:hover {
+        font-size: 270%;
       }
-      td:hover{
-        background-color: rgba(0,0,0,0.2);
-      
+      td:hover {
+        background-color: rgba(0, 0, 0, 0.2);
       }
-      .row1 span,.row2 span{
+      .row1 span,
+      .row2 span {
         color: black;
       }
-      .row1 td:nth-child(even),.row3 td:nth-child(even),.row5 td:nth-child(even),.row7 td:nth-child(even){
+      .row1 td:nth-child(even),
+      .row3 td:nth-child(even),
+      .row5 td:nth-child(even),
+      .row7 td:nth-child(even) {
         background-color: gray;
         cursor: pointer;
       }
-      .row2 td:nth-child(odd),.row4 td:nth-child(odd),.row6 td:nth-child(odd),.row8 td:nth-child(odd){
+      .row2 td:nth-child(odd),
+      .row4 td:nth-child(odd),
+      .row6 td:nth-child(odd),
+      .row8 td:nth-child(odd) {
         background-color: gray;
         cursor: pointer;
       }
@@ -62,88 +69,88 @@
   </head>
   <body>
     <div class="container">
-    <table>
-      <tr class="row1">
-        <td><span>&#9814;</span>  </td>
-        <td> <span>&#9816;</span>  </td>
-        <td> <span>&#9815;</span>  </td>
-        <td> <span>&#9813;</span>  </td>
-        <td> <span>&#9812;</span>  </td>
-        <td> <span>&#9815;</span>  </td>
-        <td> <span>&#9816;</span>  </td>
-        <td> <span>&#9814;</span>  </td>
-      </tr>
-      <tr class="row2">
-        <td> <span>&#9817;</span></td>
-        <td> <span>&#9817;</span></td>
-        <td> <span>&#9817;</span></td>
-        <td> <span>&#9817;</span></td>
-        <td> <span>&#9817;</span></td>
-        <td> <span>&#9817;</span></td>
-        <td> <span>&#9817;</span></td>
-        <td> <span>&#9817;</span></td>
-      </tr>
-      <tr class="row3">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr class="row4">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr class="row5">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr class="row6">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr class="row7">
-        <td> <span>&#9823;</span></td>
-        <td> <span>&#9823;</span></td>
-        <td> <span>&#9823;</span></td>
-        <td> <span>&#9823;</span></td>
-        <td> <span>&#9823;</span></td>
-        <td> <span>&#9823;</span></td>
-        <td> <span>&#9823;</span></td>
-        <td> <span>&#9823;</span></td>
-      </tr>
-      <tr class="row8">
-        <td> <span>&#9820;</span> </td>
-        <td> <span>&#9822;</span> </td>
-        <td> <span>&#9821;</span> </td>
-        <td> <span>&#9818;</span> </td>
-        <td> <span>&#9819;</span></td>
-        <td> <span>&#9821;</span> </td>
-        <td> <span>&#9822;</span> </td>
-        <td> <span>&#9820;</span> </td>
-      </tr>
-    </table>
+      <table>
+        <tr class="row1">
+          <td><span>&#9814;</span></td>
+          <td><span>&#9816;</span></td>
+          <td><span>&#9815;</span></td>
+          <td><span>&#9813;</span></td>
+          <td><span>&#9812;</span></td>
+          <td><span>&#9815;</span></td>
+          <td><span>&#9816;</span></td>
+          <td><span>&#9814;</span></td>
+        </tr>
+        <tr class="row2">
+          <td><span>&#9817;</span></td>
+          <td><span>&#9817;</span></td>
+          <td><span>&#9817;</span></td>
+          <td><span>&#9817;</span></td>
+          <td><span>&#9817;</span></td>
+          <td><span>&#9817;</span></td>
+          <td><span>&#9817;</span></td>
+          <td><span>&#9817;</span></td>
+        </tr>
+        <tr class="row3">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="row4">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="row5">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="row6">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="row7">
+          <td><span>&#9823;</span></td>
+          <td><span>&#9823;</span></td>
+          <td><span>&#9823;</span></td>
+          <td><span>&#9823;</span></td>
+          <td><span>&#9823;</span></td>
+          <td><span>&#9823;</span></td>
+          <td><span>&#9823;</span></td>
+          <td><span>&#9823;</span></td>
+        </tr>
+        <tr class="row8">
+          <td><span>&#9820;</span></td>
+          <td><span>&#9822;</span></td>
+          <td><span>&#9821;</span></td>
+          <td><span>&#9818;</span></td>
+          <td><span>&#9819;</span></td>
+          <td><span>&#9821;</span></td>
+          <td><span>&#9822;</span></td>
+          <td><span>&#9820;</span></td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
