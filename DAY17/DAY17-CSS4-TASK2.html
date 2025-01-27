@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .navbar {
+        display: flex;
+        grid-template-columns: repeat(15, auto);
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .navbar a {
+        font-size: 1%;
+        display: flex;
+        text-decoration: none;
+
+        color: white;
+        transition: background-color 0.25s;
+      }
+      a:hover {
+        background-color: rgba(0, 0, 0);
+        transition: background-color 0.1s;
+      }
+      a:active {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div><a href="https://www.w3schools.com/html/default.asp">HTML</a></div>
+      <div><a href="https://www.w3schools.com/css/default.asp">CSS</a></div>
+      <div><a href="https://www.w3schools.com/sql/default.asp">SQL</a></div>
+      <div>
+        <a href="https://www.w3schools.com/python/default.asp">PYTHON</a>
+      </div>
+      <div><a href="https://www.w3schools.com/java/default.asp">JAVA</a></div>
+      <div><a href="https://www.w3schools.com/php/default.asp">PHP</a></div>
+      <div><a href="https://www.w3schools.com/c/index.php">C</a></div>
+      <div><a href="https://www.w3schools.com/cpp/default.asp">C++</a></div>
+      <div><a href="https://www.w3schools.com/cs/index.php">C#</a></div>
+      <div>
+        <a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp"
+          >BOOTSTRAP</a
+        >
+      </div>
+      <div><a href="https://www.w3schools.com/react/default.asp">REACT</a></div>
+      <div><a href="https://www.w3schools.com/mysql/default.asp">MYSQL</a></div>
+      <div>
+        <a href="https://www.w3schools.com/jquery/default.asp">JQUERY</a>
+      </div>
+      <div><a href="https://www.w3schools.com/excel/index.php">EXCEL</a></div>
+    </div>
+  </body>
+</html>
