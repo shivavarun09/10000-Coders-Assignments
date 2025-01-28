@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="nav-bar.css" />
+    <link rel="stylesheet" href="br-image.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      .house-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 22.5%);
+        column-gap: 2.5%;
+        row-gap: 2.5%;
+        margin: 5%;
+        justify-content: center;
+      }
+      .house-projects {
+        position: relative;
+      }
+
+      .house-image {
+        width: 100%;
+        height: auto;
+        display: inline-block;
+      }
+      .house-type {
+        position: absolute;
+        padding: 3% 3%;
+        top: 0%;
+        left: 0%;
+      }
+      .house-type {
+        background-color: black;
+        color: white;
+      }
+      .p-title {
+        margin: 2% 5%;
+        font: 20px bold;
+      }
+      hr {
+        text-align: center;
+        margin: 0 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="p-title">Projects</p>
+    <hr />
+    <section id="Projects">
+      <div class="house-grid">
+        <div class="house-projects">
+          <img class="house-image" src="summer-house.jpg" alt="" />
+          <p class="house-type">Summar House</p>
+        </div>
+
+        <div class="house-projects">
+          <img class="house-image" src="brick-house.jpg" alt="" />
+          <p class="house-type">Birck House</p>
+        </div>
+
+        <div class="house-projects">
+          <img class="house-image" src="renovated-house.jpg" alt="" />
+          <p class="house-type">Renovated House</p>
+        </div>
+
+        <div class="house-projects">
+          <img class="house-image" src="barn-house.jpg" alt="" />
+          <p class="house-type">Barn House</p>
+        </div>
+
+        <div class="house-projects">
+          <img class="house-image" src="summer-house-2.jpg" alt="" />
+          <p class="house-type">Summar House</p>
+        </div>
+
+        <div class="house-projects">
+          <img class="house-image" src="brick-house-2.jpg" alt="" />
+          <p class="house-type">Birck House</p>
+        </div>
+
+        <div class="house-projects">
+          <img class="house-image" src="renovated-house-2.jpg" alt="" />
+          <p class="house-type">Renovated House</p>
+        </div>
+
+        <div class="house-projects">
+          <img class="house-image" src="barn-house-2.jpg" alt="" />
+          <p class="house-type">Barn House</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

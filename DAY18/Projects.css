@@ -1,0 +1,38 @@
+.house-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 22.5%);
+  column-gap: 2.5%;
+  row-gap: 2.5%;
+  margin: 5%;
+  justify-content: center;
+}
+header{
+  position: sticky;
+}
+.house-projects {
+  position: relative;
+}
+
+.house-image {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+.house-type {
+  position: absolute;
+  padding: 3% 3%;
+  top: 0%;
+  left: 0%;
+}
+.house-type {
+  background-color: black;
+  color: white;
+}
+.p-title {
+  margin: 4% 5% 2%;
+  font: 20px bold;
+}
+hr {
+  text-align: center;
+  margin: 0 5%;
+}

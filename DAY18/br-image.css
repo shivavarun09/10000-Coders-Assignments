@@ -1,0 +1,25 @@
+.br-arch-img {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+}
+.c-name {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 2%;
+  left: 40%;
+  top: 50%;
+  right: 40%;
+  bottom: 50%;
+  color: white;
+  width: 20%;
+}
+.textinimage1,
+.textinimage2 {
+  font-size: 250%;
+  text-align: center;
+}
+.textinimage1 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
