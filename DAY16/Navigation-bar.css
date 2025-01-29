@@ -1,6 +1,8 @@
-header {
-  position: fixed;
+.navbar{
+  position: sticky;
   width: 100%;
+  top: 0;
+  z-index: 1;
 }
 nav {
   display: flex;
@@ -16,26 +18,22 @@ nav {
 .left-sec {
   display: grid;
   grid-template-columns: 60px 1fr;
+  
   flex: 7.5 10; /* takes 75% width space of nav bar and shrinks 10times faster (i.e flex shrink) */
 }
 .c-logo{
   width: 100%;
   border-radius: 50%;
-  margin: 5%;
+  margin-left: 5%;
   align-self: flex-end;
   cursor: pointer;
 }
 .company-name{
-  align-content: center;
-  color:gray;
+  align-self: center;
+  color:black;
   font: 20px solid thin;
 }
-.c-name{
-  align-self: flex-end;
-  font: 18px blue ;
-  text-align: start;
-  margin-left: 1%;
-}
+
 .right-sec {
   flex: 2.5 0 0;  /* takes 25% width space of nav bar and no shrink and grow (i.e 0 and 0 values) */
 
@@ -48,6 +46,6 @@ nav {
 }
 a{
   font: 15px;
-  color: gray;
+  color: black;
   text-decoration: none;
 }
