@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="child3.css">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .mobile {
+        width: 300px;
+        height: 560px;
+        border: 3px solid black;
+        margin: auto;
+        border-radius: 20px;
+        position: relative;
+      }
+      .child1 {
+        height: 50px;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        background-color: white;
+        display: grid;
+        position: sticky;
+        top: 0;
+        grid-template-columns: 1fr 100px;
+      }
+      .l-section {
+        display: grid;
+        grid-template-columns: 10px 50px 50px 10px 1fr;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+      }
+      .l-section p {
+        color: rgb(88, 87, 87);
+      }
+      .len-logo {
+        width: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .r-section {
+        display: grid;
+        grid-template-columns: 1fr 20px 10px 5px;
+        gap: 10px;
+        align-items: center;
+        text-align: right;
+      }
+      i {
+        color: rgb(88, 87, 87);
+        cursor: pointer;
+      }
+      .child2 {
+        width: 100%;
+        height: 460px;
+        background: url(background.jpg);
+        overflow: scroll;
+        scrollbar-width: none;
+        background-color: white;
+        position: relative;
+      }
+      .date {
+        text-align: center;
+        width: 40%;
+        font-size: 14px;
+        border-radius: 5px;
+        display: block;
+        margin: auto;
+        background-color: gray;
+        position: sticky;
+        top: 3px;
+        z-index: 1;
+      }
+
+      .out-msg p,
+      .in-msg p {
+        text-align: justify;
+        display: inline-block;
+        background-color: lightgreen;
+
+        border-radius: 5px;
+        padding: 2px 3px;
+        max-height: auto;
+        position: relative;
+      }
+      .out-msg p,
+      .in-msg p {
+        min-height: 35px;
+        width: auto;
+        min-width: 50px;
+        max-width: 180px;
+      }
+      .out-msg p {
+        text-align: justify;
+      }
+      .in-msg p {
+        text-align: left;
+      }
+      .imgs {
+        width: 50px !important;
+      }
+
+      .out-msg {
+        text-align: right;
+      }
+      .in-msg {
+        text-align: left;
+      }
+
+      .out-msg,
+      .in-msg {
+        margin: 10px;
+        font-size: 14px;
+        color: white;
+        border-radius: 3px;
+      }
+      span {
+        color: blue;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+      }
+      .eye-frame {
+        width: 100px;
+        height: 100px;
+
+        background-color: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mobile">
+<div class="child1">
+        <div class="l-section">
+          <div class="icon"><i class="fa-solid fa-arrow-left"></i></div>
+          <div class="icon">
+            <img class="len-logo" src="images.jpg" alt="" />
+          </div>
+          <div class="icon"><p>Lenskart</p></div>
+          <div class="icon">
+            <p>&check;</p>
+          </div>
+        </div>
+        <div class="r-section">
+          <div class="icon"><i class="fa-solid fa-video"></i></div>
+          <div class="icon"><i class="fa-duotone fa-solid fa-phone"></i></div>
+          <div class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+        </div>
+      </div>
+
+      <div class="child2">      
+        <div class="date">26 january 2025</div>
+        <div class="out-msg">
+          <p>
+            Hi Lenskart, I need help with product ID: 207481.
+            <span> &check;&check;</span>
+          </p>
+        </div>
+        <div class="in-msg">
+          <p>
+            That’s the Lenskart Air Full Rim Square Frame. How can I assist?
+          </p>
+        </div>
+        <div class="out-msg">
+          <p>
+            Tell me the details
+            <span>&check;&check;</span>
+          </p>
+        </div>
+        <div class="in-msg">
+          <p>
+            Lightweight TR90 material, unisex, available in blue and yellow.
+            Fits prescription lenses.
+          </p>
+        </div>
+        <div class="out-msg">
+          <p>
+            Nice! What lens options do you have?
+            <span>&check;&check;</span>
+          </p>
+        </div>
+        <div class="in-msg">
+          <p>
+            Anti-glare (+₹500) or blue light protection (+₹800). Buyer: Got it!
+            I’ll check and get back.
+          </p>
+        </div>
+        <div class="out-msg">
+          <p>Got it! I’ll check and get back. <span>&check;&check;</span></p>
+        </div>
+        <div class="in-msg">
+          <p>Sure! Let me know if you have questions.</p>
+        </div>
+        <div class="date">27 january 2025</div>
+
+        <div class="out-msg">
+          <p>
+            I’ll go with the blue light protection option. How do I order?
+            <span>&check;&check;</span>
+          </p>
+        </div>
+        <div class="in-msg">
+          <p>okay I’ll process it do you want to prepaid or COD</p>
+        </div>
+        <div class="out-msg">
+          <p>
+            COD
+            <span> &check;&check;</span>
+          </p>
+        </div>
+        <div class="in-msg"><p>Okay, Order placed successfully</p></div>
+        <div class="out-msg">
+          <p>
+            okay thank you, when will i get it.
+            <span>&check;&check;</span>
+          </p>
+        </div>
+        <div class="in-msg">
+          <p>5-7 working days, with free home delivery.</p>
+        </div>
+        <div class="out-msg">
+          <p>
+            That’s nice! Thank you.
+            <span>&check;&check;</span>
+          </p>
+        </div>
+
+        <div class="date">28 january 2025</div>
+
+        <div class="in-msg">
+          <p>Your order has been shipped! Track here: [Link]</p>
+        </div>
+        <div class="date">yesterday</div>
+
+        <div class="in-msg">
+          <p>Your Lenskart order is out for delivary</p>
+        </div>
+        <div class="in-msg">
+          <p>Your Lenskart order deliverd successfully</p>
+        </div>
+        <div class="date">today</div>
+        <div class="in-msg">
+          <p>
+            Please provide your feedback on Your recent Lenskart order by giving
+            reponse between 1-10
+          </p>
+        </div>
+        <div class="out-msg">
+          <p>10 <span>&check;&check;</span></p>
+        </div>
+        <div class="in-msg">
+          <p>Thank you for choosing Lenskart</p>
+        </div>
+      </div>
+<!-- footer part -->
+<div class="footer-sec">
+  <div class="foot">
+      <i class="fa-regular fa-face-smile foot-i"></i>
+      <input type="text" name="" id="" placeholder="Message">
+      <i class="fa-solid fa-paperclip foot-i"></i>
+      <i class="fa-solid fa-indian-rupee-sign foot-i"></i>
+      <i class="fa-solid fa-camera-retro foot-i"></i>
+    
+  
+      <i class="fa-solid fa-microphone"></i>
+
+  
+  </div>
+
+  </div>
+    </div>
+  </body>
+</html>
