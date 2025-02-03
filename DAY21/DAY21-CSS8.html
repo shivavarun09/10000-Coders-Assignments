@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 4px;
+        column-gap: 4px;
+        vertical-align: bottom;
+      }
+      .box {
+        position: relative;
+        border-style: groove;
+        min-width: 200px;
+        max-width: 300px;
+      }
+      .topcon {
+        display: flex;
+        justify-content: space-between;
+        margin: 0.5rem;
+      }
+      .installs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0.5rem;
+        align-content: flex-end;
+      }
+      .installs > button {
+        background-color: green;
+        border: none;
+        padding: 0.3rem 0.5rem;
+        color: white;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        transition: box-shadow 0.2s;
+      }
+      .installs > button:hover{
+        box-shadow: 2px 2px 4px rgb(0, 128, 0,0.6);
+      }
+      @media screen and (max-width: 480px) {
+        .box {
+          min-width: 200px;
+          max-width: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="topcon">
+          <img style="width: 50px" src="zomato.jpg" alt="zomato" />
+
+          <div class="details">
+            <p>Zomato</p>
+            <p style="color: lightgray; font-size: 0.8rem">Food delivery</p>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="info" style="margin: 0.5rem">
+          Order from a variety of local and international restaurants, with
+          real-time order tracking and 24/7 customer support.
+        </div>
+        <div class="installs">
+          <p style="color: lightgray; font-size: 0.8rem">10M installs</p>
+          <button>install</button>
+        </div>
+      </div>
+      <!-- zomato -->
+      <div class="box">
+        <div class="topcon">
+          <img style="width: 50px" src="swiggy.png" alt="swiggy" />
+
+          <div class="details">
+            <p>Swiggy</p>
+            <p style="color: lightgray; font-size: 0.8rem">Food delivery</p>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="info" style="margin: 0.5rem">
+          Order from a variety of local and international restaurants, with
+          real-time order tracking and 24/7 customer support.
+        </div>
+        <div class="installs">
+          <p style="color: lightgray; font-size: 0.8rem">10M installs</p>
+          <button>install</button>
+        </div>
+      </div>
+      <!-- swiggy -->
+
+      <div class="box">
+        <div class="topcon">
+          <img style="width: 50px" src="blinkit.png" alt="blinkit" />
+
+          <div class="details">
+            <p>Blinkit</p>
+            <p style="color: lightgray; font-size: 0.8rem">Quick commerce</p>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="info" style="margin: 0.5rem">
+          Order groceries, fresh fruits, vegetables, household essentials, and
+          more with instant delivery in minutes, real-time order tracking, and
+          24/7 customer support.
+        </div>
+        <div class="installs">
+          <p style="color: lightgray; font-size: 0.8rem">10M installs</p>
+          <button>install</button>
+        </div>
+      </div>
+      <!-- blinkit -->
+      <div class="box">
+        <div class="topcon">
+          <img style="width: 50px" src="zepto.png" alt="zepto" />
+
+          <div class="details">
+            <p>Blinkit</p>
+            <p style="color: lightgray; font-size: 0.8rem">Quick commerce</p>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="info" style="margin: 0.5rem">
+          Get groceries, snacks, dairy products, and daily essentials delivered
+          to your doorstep in 10 minutes, with live tracking and round-the-clock
+          customer support.
+        </div>
+        <div class="installs">
+          <p style="color: lightgray; font-size: 0.8rem">10M installs</p>
+          <button>install</button>
+        </div>
+      </div>
+      <!-- zzepto -->
+      <div class="box">
+        <div class="topcon">
+          <img style="width: 50px" src="bigbasket.png" alt="bigbasket" />
+          <div class="details">
+            <p>Blinkit</p>
+            <p style="color: lightgray; font-size: 0.8rem">Quick commerce</p>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="info" style="margin: 0.5rem">
+          Get groceries, snacks, dairy products, and daily essentials delivered
+          to your doorstep in 10 minutes, with live tracking and round-the-clock
+          customer support.
+        </div>
+        <div class="installs">
+          <p style="color: lightgray; font-size: 0.8rem">10M installs</p>
+          <button>install</button>
+        </div>
+      </div>
+<!-- bigbasket -->
+      <div class="box">
+        <div class="topcon">
+          <img style="width: 50px" src="jiomart.png" alt="jiomart" />
+          <div class="details">
+            <p>Jiomart</p>
+            <p style="color: lightgray; font-size: 0.8rem">E-commerce</p>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="info" style="margin: 0.5rem">
+          Order groceries, fresh produce, and household items with convenient delivery options, real-time tracking, and customer support, all at competitive prices.
+        </div>
+        <div class="installs">
+          <p style="color: lightgray; font-size: 0.8rem">10M installs</p>
+          <button>install</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

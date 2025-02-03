@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=all" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+ZA+Guides&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <style>
+      .shadowbox{
+        width: 80%;
+        padding: 5px 0;
+        border-style: groove;
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4), 2px 2px 3px red;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 1% auto;
+      }
+      .font-box {
+        width: 200px;
+        height: 200px;
+        border-style: groove;
+        border: 2px solid black;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      .font-box:nth-child(odd) {
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4), 2px 2px 3px red;
+        transition: font-family 0.25s scale 0.35;
+      }
+      .font-box:nth-child(even) {
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4), 2px 2px 3px blue;
+        transition: font-family 0.25s scale 0.35;
+      }
+      .font-box:hover {
+        transform: scale(1.125);
+      }
+      .font-box:nth-child(even):hover {
+        background-color: lightcyan;
+      }
+      .font-box:nth-child(odd):hover {
+        background-color: lightblue;
+      }
+
+      #box1:hover {
+        font-family: "Averia Serif Libre", serif;
+      }
+      #box2:hover {
+        font-family: "Dancing Script", serif;
+      }
+      #box3:hover {
+        font-family: "Playwrite IN", serif;
+            }
+      #box4:hover {
+        font-family: "Courier Prime", serif;
+      }
+      #box5:hover {
+        font-family: "Playwrite ZA Guides", serif;
+      }
+      #box6:hover {
+        font-family: "Roboto Condensed", serif;
+      }
+      #box7:hover {
+        font-family: "Merriweather", serif;
+      }
+      #box8:hover {
+        font-family: "Pacifico", serif;
+      }
+      #box9:hover {
+        font-family: "Kablammo", serif
+      }
+      #box10:hover {
+        font-family: "Atma", serif;
+      }
+      #box11:hover {
+        font-family: "Mountains of Christmas", serif;
+      }
+      #box12:hover {
+        font-family: "UnifrakturMaguntia", serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shadowbox">HOVER ON DIVS</div>
+    <div class="container">
+      <div class="font-box" id="box1">Averia Serif Libre</div>
+      <div class="font-box" id="box2">Dancing Script</div>
+      <div class="font-box" id="box3">Playwrite IN</div>
+      <div class="font-box" id="box4">Courier Prime</div>
+      <div class="font-box" id="box5">Playwrite ZA Guides</div>
+      <div class="font-box" id="box6">Roboto Condensed</div>
+      <div class="font-box" id="box7">Merriweather</div>
+      <div class="font-box" id="box8">Pacifico</div>
+      <div class="font-box" id="box9">Kablammo</div>
+      <div class="font-box" id="box10">Atma</div>
+      <div class="font-box" id="box11">Mountains of Christmas</div>
+      <div class="font-box" id="box12">UnifrakturMaguntia</div>
+    </div>
+  </body>
+</html>
