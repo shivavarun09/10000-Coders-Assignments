@@ -18,11 +18,11 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        align-items: center;
+        justify-content: center;
         row-gap: 4px;
         column-gap: 4px;
         vertical-align: bottom;
-        margin: 2%;
+        
       }
       .box {
         position: relative;
@@ -55,14 +55,16 @@
         cursor: pointer;
         transition: box-shadow 0.2s;
       }
-      .installs > button:hover{
-        box-shadow: 2px 2px 4px rgb(0, 128, 0,0.6);
+      .info::first-letter {
+        font-size: 1.2re;
+      }
+      .installs > button:hover {
+        box-shadow: 2px 2px 4px rgb(0, 128, 0, 0.6);
       }
       @media screen and (max-width: 480px) {
         .box {
-          width: 250px;
+          min-width: 250px;
           height: auto;
-        
         }
       }
     </style>
@@ -176,7 +178,7 @@
           <button>install</button>
         </div>
       </div>
-<!-- bigbasket -->
+      <!-- bigbasket -->
       <div class="box">
         <div class="topcon">
           <img style="width: 50px" src="jiomart.png" alt="jiomart" />
@@ -188,7 +190,9 @@
           </div>
         </div>
         <div class="info" style="margin: 0.5rem">
-          Order groceries, fresh produce, and household items with convenient delivery options, real-time tracking, and customer support, all at competitive prices.
+          Order groceries, fresh produce, and household items with convenient
+          delivery options, real-time tracking, and customer support, all at
+          competitive prices.
         </div>
         <div class="installs">
           <p style="color: lightgray; font-size: 0.8rem">10M installs</p>

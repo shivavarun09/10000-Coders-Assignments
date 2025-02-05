@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: whitesmoke;
+      }
+      a {
+        padding: 0.5rem;
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      a:hover {
+        background-color: rgba(128, 128, 128, 0.6);
+      }
+      #about{
+        display: flex;
+column-gap: 4%;
+      }
+      .about-content{
+        display: flex;
+        flex-direction: column;
+        margin: 5%;
+        align-items: center;
+      }
+
+      
+.aboutus-section{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2,min(40%));
+gap: 3%;
+flex-wrap: wrap;
+margin: 5% 0 ;
+height: fit-content;
+}
+#tr-image2{
+  width: 100%;
+  height: 100%;
+}
+.about-content{
+  width: 100%;
+  margin: 3% ;
+  line-height: 1.5rem;
+}
+.about-catering,.about-since{
+  text-align: center;
+  margin: 2% 0;
+}
+.about-catering{
+  font: 25px solid thin;
+  margin: 0 0 5%;
+}
+.about-since{
+  font: 1rem gray;
+}
+.about-info{
+
+}
+    </style>
+  </head>
+  <body>
+    <div class="top" style="height: 8vh">
+      <a href="">Gourmet au Catering</a>
+      <div class="top-left">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div style="position: relative">
+      <img style="width: 100%; height: 92vh" src="hamburger.jpg" alt="image" />
+      <p
+        style="
+          position: absolute;
+          bottom: 2vw;
+          left: 2vw;
+          font-size: 1.5rem;
+          color: gray;
+        "
+      >
+        Le Catering
+      </p>
+    </div>
+
+<!-- about section stared -->
+
+ <section id="about">
+  <div>
+    <div class="aboutus-section" >
+
+      <div class="tr-image-2">
+        <img id="tr-image2" src="tablesetting2.jpg" alt="image" />
+      </div>
+      <div class="about-info">
+        <h3 class="about-catering">About Catering</h3>
+        <p class="about-since">
+          Tradition since 1889</p>
+        <div class="about-content">
+          <p>
+            The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use seasonal ingredients.
+          </p>
+        </div>
+        <div class="about-content">
+          <p>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+          
+      </div>
+      </div>
+  
+  </div>
+ </section>
+ <hr>
+ <section id="menu">
+  <div>
+    <div class="aboutus-section" >
+
+    
+      <div class="about-info">
+        <h3 class="about-catering">Our Menu</h3>
+      <h3>Bread Basket</h3>
+      <p>Assortment of fresh baked fruit breads and muffins 5.50</p>
+      </div>
+      <div class="tr-image-2">
+        <img id="tr-image2" src="tablesetting.jpg" alt="image" />
+      </div>
+      </div>
+  
+  </div>
+ </section>
+  </body>
+</html>
