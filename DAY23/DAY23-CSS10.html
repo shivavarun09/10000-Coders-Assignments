@@ -25,17 +25,18 @@
       }
       .menu-icon {
         padding: 0.8rem;
+        font-size: 1.2rem;
       }
       #menu:hover {
         background-color: rgba(128, 128, 128, 0.6);
         cursor: pointer;
       }
       .container {
-        margin: 1rem;
         display: grid;
         grid-template-columns: repeat(4, 25%);
         justify-content: center;
-        gap: 0.5rem;
+        padding: 1rem 3rem;
+        gap: 0.8rem;
       }
       .container > .items > img {
         width: 100%;
@@ -43,8 +44,11 @@
     .item-info,.item-name{
       font-family: "Karma", sans-serif;
     }
-      .item-info{
-        font-size: 0.7rem;
+    .item-name{
+      font-size: 1.17rem;
+    }
+      p{
+        font-size: 1rem;
       }
       .link-bar {
         display: flex;
@@ -70,7 +74,7 @@ background-color: gray;
           grid-template-columns: repeat(2,1fr);
         }
       }
-      @media(max-width:480px) {
+      @media(max-width:460px) {
         .container{
           grid-template-columns: 1fr;
         }
@@ -249,11 +253,11 @@ background-color: gray;
       <br />
       <p style="font-weight: 450">I am Who I Am!</p>
       <br />
-      <p style="font-size: 0.8rem; color: gray; font-style:italic">
+      <p style=" font-style:italic">
         With Passion For Real, Good Food
       </p>
       <br />
-      <p style="text-align: center; font:0.8rem thin;">
+      <p style="text-align: center;">
         Just me, myself and I, exploring the universe of unknownment. I have a
         heart of love and an interest of lorem ipsum and mauris neque quam blog.
         I want to share my world with you. Praesent tincidunt sed tellus ut
