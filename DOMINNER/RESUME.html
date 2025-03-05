@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    
+
+      document.title = "my resume";
+      document.body.style.width = "auto";
+      document.body.style.margin = "0";
+      document.body.style.padding = "0";
+      document.body.style.scrollbarWidth = "0";
+      document.body.style.backgroundColor = "aliceblue";
+      
+
+      var container = document.createElement("div");
+      
+      container.style.margin = '5px 15px';
+      container.style.scrollbarWidth = 'none';
+      document.body.appendChild(container);
+
+      var myname = document.createElement('h1');
+      myname.innerText = 'Shivavarun Paloju'.toUpperCase();
+      myname.style.color = 'blue';
+      myname.style.textAlign = 'center';
+      container.appendChild(myname)
+
+      var mailphone = document.createElement('p');
+      mailphone.innerHTML = '<p><a href="mailto:varunapps09@gmail.com">Mail</a> &#124; <a href="tel:+910000000000"> Mobile &#124; </a><a href="https://www.linkedin.com/in/shivavarunpaloju" target = "_blank">Linkdln</a> &#124; <a href=" https://github.com/shivavarun09" target = "_blank">GitHub</a></p>'
+      mailphone.style.textAlign = 'center';
+      mailphone.style.fontSize = '1.1rem';
+      
+      container.appendChild(mailphone);
+
+
+      var objective = document.createElement('h2');
+      objective.innerText = 'Objective'.toUpperCase();
+      
+      var line = document.createElement('hr');
+    
+
+      container.append(objective,line);
+
+      var objective_mgs = document.createElement('p');
+      objective_mgs.innerText = "Highly motivated and detail-oriented fresher with a strong foundation in web development and data analytics. Proficient in HTML, CSS, and MySQL, with strong problem-solving skills and analytical thinking abilities. Actively learning JavaScript, python to expand my technical expertise and enhance my development skills. Good at breaking down complex problems and approaching them with a logical and structured mindset. Eager to apply my knowledge to real-world projects, collaborate effectively in team environments, and grow through guidance from industry experts.";
+
+      container.appendChild(objective_mgs);
+
+      var education = document.createElement('h2');
+      education.innerText = 'Education'.toUpperCase();
+      var line1 = document.createElement('hr');
+
+      var education_details1 = document.createElement('div')
+      education_details1.innerHTML = '<div>B.E in Computer Science and Engineering <br> Matrusri Engineering College </div>                           <div> 2019 -2022 <br>CGPA: 6.95/10 </div> '
+      education_details1.style.display = 'flex';
+      education_details1.style.justifyContent = 'space-between';
+      education_details1.style.marginBottom = '5px';
+
+      var education_details2 = document.createElement('div')
+      education_details2.innerHTML = '<div>Diploma in Computer Engineering <br> Govt Polytechnic Nalgonda </div>                           <div> 2016 -2019 <br>CGPA: 8.46/10 </div> '
+      education_details2.style.display = 'flex';
+      education_details2.style.justifyContent = 'space-between';
+
+
+      container.append(education,line1,education_details1,education_details2)
+
+      var projects = document.createElement('h2');
+      projects.innerText = 'Projects'.toUpperCase();
+      var line3 = document.createElement('hr');
+      var projects_details = document.createElement('div');
+      projects_details.innerHTML = '<p> <strong>Accenture North America Data Analytics and Visualization Completion Certificate Social Buzz Project  </strong> </p><ul><li>Merged three different datasets—content-category, content, and reaction-score—into a single master dataset using MS Excel, leveraging primary keys and the VLOOKUP function for efficient data analysis.</li> <li>Utilized pivot tables in MS Excel to summarize and aggregate data, identifying the top 5 content categories on the Social Buzz platform by sorting reaction scores in descending order.</li><li>Created charts in MS Excel to visually represent insights and share findings effectively with stakeholders.</li></ul> '                                                                       
+
+      container.append(projects,line3,projects_details)
+
+      var technicalskills = document.createElement('h2');
+      technicalskills.innerText = 'technical Skills'.toUpperCase();
+      var line4 = document.createElement('hr');
+
+      var technicalskills_details = document.createElement('div');
+      technicalskills_details.innerHTML = '<ul> <li> <strong>Technologies :</strong> HTML, CSS</li> <li> <strong>Database :</strong> MySQl</li> <li> <strong>Tools	 :</strong> GitHub, VS code, MS Excel</li>  '
+
+      container.append(technicalskills,line4,technicalskills_details)
+
+      var softskills = document.createElement('h2');
+      softskills.innerText = 'Soft Skills'.toUpperCase();
+      var line5 = document.createElement('hr');
+
+      var softskills_details = document.createElement('div');
+      softskills_details.innerHTML = '<ul><li>Problem solving </li> <li>Teamwork </li> <li>Decision Making  </li> <li>Time Management   </li> <li>Adaptability  </li> <li> Critical thinking</li> '
+      container.append(softskills,line5,softskills_details)
+
+      var Certificate = document.createElement('h2');
+      Certificate.innerText = 'Certificates'.toUpperCase();
+      var line5 = document.createElement('hr');
+      var Certificate_details = document.createElement('div');
+      Certificate_details.innerHTML  = '<ul><li>Accenture North America Data Analytics and Visualization Certificate   </li> <li>Google Data Analytics Professional Certificate on Coursera   </li> </ul>'
+
+      container.append(Certificate,line5,Certificate_details)
+
+
+
+    </script>
+  </body>
+</html>

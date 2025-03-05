@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      min-width: 100%;
+      display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(19,1fr);
+      grid-template-areas: 
+      " a a a a a"
+      "a a a a a"
+      " f b b b b"
+      " f b b b b"
+      " f c c d d"
+      " f c c d d"
+      " f c c d d"
+      " f c c d d"
+      " f c c d d"
+      " f e e e e"
+      " f e e e e"
+      "g g g g g"
+      "g g g g g"
+      
+    ;
+      gap: 10px;
+    
+    }
+    .container>div{
+  padding: 10px;
+background-color: antiquewhite;
+    }
+.item1{
+  grid-area: a;
+
+}
+.item2{
+  grid-area: b;
+}
+.item3{
+  grid-area: c;
+}
+.item4{
+  grid-area: d;
+}
+.item5{
+  grid-area: e;
+}
+.item6{
+  grid-area: f;
+}
+.item7{
+  grid-area: g;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+  
+  </div>
+</body>
+</html>

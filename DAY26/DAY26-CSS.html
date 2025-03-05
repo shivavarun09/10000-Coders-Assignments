@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 700px;
+      height: 500px;
+      border-style: groove;
+display: flex;
+justify-content: center;
+align-items: center;
+    }
+    img{
+      align-self: middle;
+    }
+  .b1:hover + #im{
+transform: rotateX('30 deg')
+  }
+  .b1,.b2,.b3,.b4{
+    margin: 1rem;
+    align-self: baseline;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="b1">Translate</button>
+    <img id="im" src="cat.jpg" alt="img" width="200px" height="200px">
+
+    <button class="b2">Rotate</button>
+    <button class="b3">Scale</button>
+    <button class="b4">Skew</button>
+  </div>
+</body>
+</html>

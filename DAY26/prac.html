@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+  #button1:hover ~ image{
+    transform: rotate(90deg);
+  }
+  #button2:hover ~ image{
+    transform: scale(1.2);
+  }
+  #button3:hover ~ image{
+    transform: skewX(20deg);
+  }
+  #button4:hover + image{
+    transform: translate()
+  }
+</style>
+</head>
+<body>
+  <div class="con">
+    <button id="button1">rotate</button>
+    <button id="button2">scale</button>
+    <button id="button3">skew</button>
+    <button id="button4">translate</button>
+    <img src="cat.jpg" alt="" width="100px " height="100px" id="image">
+  </div>
+</body>
+</html>
