@@ -31,9 +31,9 @@ var Contact = document.createElement('div');
 
 nav_left.innerHTML = '<a href ="BR-ARCHITECTS.html  "> <strong>BR </strong> Architects </a>  ';
 
-projects.innerHTML = '<a href ="#projects_section"> Projects </a> ';
-About.innerHTML = '<a href ="#"> About </a> ';
-Contact.innerHTML = '<a href ="#"> Contact </a> ';
+projects.innerHTML = '<a href ="BR-ARCHITECTS.html"> Projects </a> ';
+About.innerHTML = '<a href ="BR-ARCHITECTS.html"> About </a> ';
+Contact.innerHTML = '<a href ="BR-ARCHITECTS.html"> Contact </a> ';
 nav_right.style.display ='flex';
 projects.style.margin = '0 10px';
 About.style.margin = '0 10px';
@@ -94,6 +94,7 @@ container.style.padding = '10px';
    for(i=0;i<title.length;i++){
       {
        var child =document.createElement("div");
+       child.style,backgroundColor = 'lightgray';
        var img =document.createElement("img");
        img.style.width = '350px';
        img.style.hei = '350px';
