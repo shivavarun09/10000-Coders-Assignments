@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+
+  </style>
+</head>
+<body>
+  <script>
+    document.title="DOM WEBSITE";
+document.body.style.boxSizing = 'border-box';
+document.body.style.margin = '0 ';
+document.body.style.padding = '10px';
+document.body.style.padding = '0';
+
+var header = document.createElement('header');
+header.style.position = 'sticky';
+header.style.zIndex = '2';
+header.style.backgroundColor = 'white';
+header.style.top = '0';
+var nav = document.createElement('nav');
+var nav_left = document.createElement('div');
+var nav_right = document.createElement('div');
+var projects = document.createElement('div');
+var About = document.createElement('div');
+var Contact = document.createElement('div');
+
+nav_left.innerHTML = '<a href ="BR-ARCHITECTS.html  "> <strong>BR </strong> Architects </a>  ';
+
+projects.innerHTML = '<a href ="#projects_section"> Projects </a> ';
+About.innerHTML = '<a href ="#"> About </a> ';
+Contact.innerHTML = '<a href ="#"> Contact </a> ';
+nav_right.style.display ='flex';
+projects.style.margin = '0 10px';
+About.style.margin = '0 10px';
+Contact.style.margin = '0 10px';
+nav_left.style.margin = '0 10px';
+nav_right.append(projects,About,Contact)
+
+
+
+nav.style.display = 'flex';
+nav.style.position = 'sticky';
+nav.style.top = '0';
+nav.style.height = '60px';
+nav.style.alignItems = 'center';
+nav.style.justifyContent = 'space-between';
+nav.style.alignContent = 'center';
+
+nav.append(nav_left,nav_right)
+header.append(nav)
+document.body.append(header)
+
+var br_image_div = document.createElement('div');
+
+var br_image = document.createElement('img');
+br_image.src = ' https://www.w3schools.com/w3images/architect.jpg';
+br_image_div.style.position = 'relative';
+var textonimage = document.createElement('p');
+var br = document.createElement('div');
+var architects = document.createElement('div');
+br.innerHTML = '<strong> BR </strong>';
+architects.innerText = 'Architects';
+textonimage.append(br,architects)
+textonimage.style.position = 'absolute';
+textonimage.style.top = '50%';
+textonimage.style.left = '50%';
+br_image_div.append(br_image,textonimage)
+
+document.body.append(br_image)
+
+
+
+/* Projetcs*/
+
+var projects_section = document.createElement('div');
+var projects_title = document.createElement('h2');
+projects_title.innerText = 'Projects';
+var line = document.createElement('hr');
+
+var container=document.createElement("div");
+   var title=["Summer House", "Brick House", "Renovated",'Barn House',"Summer House", "Brick House", "Renovated",'Barn House'];
+   var links=["https://www.w3schools.com/w3images/house5.jpg", "https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house2.jpg", "https://www.w3schools.com/w3images/house3.jpg",'https://www.w3schools.com/w3images/house4.jpg', "https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house3.jpg","https://www.w3schools.com/w3images/house4.jpg","https://www.w3schools.com/w3images/house5.jpg"];
+
+container.style.display = 'grid';
+container.style.gridTemplateColumns = 'auto auto auto auto';
+container.style.gap = '10px';
+container.style.padding = '10px';
+
+   for(i=0;i<title.length;i++){
+      {
+       var child =document.createElement("div");
+       var img =document.createElement("img");
+       img.style.width = '350px';
+       img.style.hei = '350px';
+       var h1 =document.createElement("p");
+
+       child.style.position = 'relative';
+       h1.style.position = 'absolute';
+       h1.style.padding = '5px 8px';
+       h1.style.top = '-8px';
+       h1.style.left = '5px';
+       h1.style.backgroundColor = 'black';
+       h1.style.color = 'white';
+
+      }
+   h1.innerText=title[i];
+   img.src=links[i];
+   child.append(img,h1)
+   container.append(child)
+}
+
+document.body.append(projects_section,projects_title,line,container)
+
+
+/* About*/
+
+var about_section = document.createElement('div');
+var about_title = document.createElement('h2');
+about_title.innerText = 'About';
+var line2 = document.createElement('hr');
+var about_msg = document.createElement('p');
+about_msg.innerText= ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+
+
+var container=document.createElement("div");
+   var title=["John Doe", "Jane Doe", "Mike Boss",'Dan Star'];
+   var links=["https://www.w3schools.com/w3images/team2.jpg", "https://www.w3schools.com/w3images/team1.jpg","https://www.w3schools.com/w3images/team3.jpg", "https://www.w3schools.com/w3images/team4.jpg"];
+   var position = ["CEO & Founder","Architect","Architect","Architect"];
+   var message = ["Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."];
+container.style.display = 'grid';
+container.style.gridTemplateColumns = 'auto auto auto auto';
+container.style.gap = '10px';
+container.style.padding = '10px';
+
+   for(i=0;i<title.length;i++){
+      {
+       var child =document.createElement("div");
+       var img =document.createElement("img");
+       img.style.width = '350px';
+       img.style.hei = '350px';
+       var h1 =document.createElement("p");
+       var p =document.createElement("p");
+       var msg =document.createElement("p");
+       var button =document.createElement("button");
+       button.innerText ="Contact";
+       button.style.width ="100%";
+      }
+   h1.innerText=title[i];
+   img.src=links[i];
+   p.innerText=position[i];
+   msg.innerText=message[i];
+   child.append(img,h1,p,msg,button)
+   container.append(child)
+}
+
+document.body.append(about_section,about_title,line2,about_msg,container)
+
+/* contact
+
+var contact_section = document.createElement('div');
+var contact_title = document.createElement('h2');
+contact_title.innerText = 'Contact';
+var line2 = document.createElement('hr');
+var contact_msg = document.createElement('p');
+var container =document.createElement('div');
+contact_msg.innerText = 'Lets get in touch and talk about your next project.';
+
+var form = document.createElement('form');
+var name = document.createElement('input');
+var emali = document.createElement('input');
+var subject = document.createElement('input');
+var comment = document.createElement('input');
+var send_msg = document.createElement('button');
+form.append(name,emali,subject,comment,send_msg)
+document.body.append(contact_section,contact_title,line,container,form)
+
+*/
+
+
+var img_foot = document.createElement('img');
+img_foot.src = ' https://www.w3schools.com/w3images/map.jpg ';
+document.body.append(img_foot)
+
+
+var footer = document.createElement('footer');
+footer.innerText = 'Powered By Varun';
+footer.style.textAlign = 'center';
+footer.style.display = 'flex';
+footer.style.justifyContent = 'center';
+footer.style.alignItems = 'center';
+footer.style.backgroundColor = 'black';
+footer.style.color = 'white';
+footer.style.height = '60px';
+
+document.body.append(footer)
+
+
+  </script>
+</body>
+</html>
