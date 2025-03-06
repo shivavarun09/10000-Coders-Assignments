@@ -14,12 +14,12 @@
     document.title="DOM WEBSITE";
 document.body.style.boxSizing = 'border-box';
 document.body.style.margin = '0 ';
-document.body.style.padding = '10px';
 document.body.style.padding = '0';
 
 var header = document.createElement('header');
 header.style.position = 'sticky';
 header.style.zIndex = '2';
+header.style.width = '100%';
 header.style.backgroundColor = 'white';
 header.style.top = '0';
 var nav = document.createElement('nav');
@@ -59,6 +59,7 @@ var br_image_div = document.createElement('div');
 
 var br_image = document.createElement('img');
 br_image.src = ' https://www.w3schools.com/w3images/architect.jpg';
+br_image.style.width = '100%';
 br_image_div.style.position = 'relative';
 var textonimage = document.createElement('p');
 var br = document.createElement('div');
@@ -86,8 +87,8 @@ var container=document.createElement("div");
    var title=["Summer House", "Brick House", "Renovated",'Barn House',"Summer House", "Brick House", "Renovated",'Barn House'];
    var links=["https://www.w3schools.com/w3images/house5.jpg", "https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house2.jpg", "https://www.w3schools.com/w3images/house3.jpg",'https://www.w3schools.com/w3images/house4.jpg', "https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house3.jpg","https://www.w3schools.com/w3images/house4.jpg","https://www.w3schools.com/w3images/house5.jpg"];
 
-container.style.display = 'grid';
-container.style.gridTemplateColumns = 'auto auto auto auto';
+container.style.display = 'flex';
+container.style.flexWrap = 'wrap';
 container.style.gap = '10px';
 container.style.padding = '10px';
 
@@ -96,8 +97,8 @@ container.style.padding = '10px';
        var child =document.createElement("div");
        child.style,backgroundColor = 'lightgray';
        var img =document.createElement("img");
-       img.style.width = '350px';
-       img.style.hei = '350px';
+       img.style.width = '300px';
+       img.style.hei = '300px';
        var h1 =document.createElement("p");
 
        child.style.position = 'relative';
@@ -133,17 +134,17 @@ var container=document.createElement("div");
    var links=["https://www.w3schools.com/w3images/team2.jpg", "https://www.w3schools.com/w3images/team1.jpg","https://www.w3schools.com/w3images/team3.jpg", "https://www.w3schools.com/w3images/team4.jpg"];
    var position = ["CEO & Founder","Architect","Architect","Architect"];
    var message = ["Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."];
-container.style.display = 'grid';
-container.style.gridTemplateColumns = 'auto auto auto auto';
-container.style.gap = '10px';
-container.style.padding = '10px';
-
+   container.style.display = 'flex';
+   container.style.flexWrap = 'wrap';
+   container.style.gap = '10px';
+   container.style.padding = '10px';
    for(i=0;i<title.length;i++){
       {
        var child =document.createElement("div");
+       child.style.width = '300px'
        var img =document.createElement("img");
-       img.style.width = '350px';
-       img.style.hei = '350px';
+       img.style.width = '300px';
+       img.style.hei = '300px';
        var h1 =document.createElement("p");
        var p =document.createElement("p");
        var msg =document.createElement("p");
@@ -185,6 +186,7 @@ document.body.append(contact_section,contact_title,line,container,form)
 
 var img_foot = document.createElement('img');
 img_foot.src = ' https://www.w3schools.com/w3images/map.jpg ';
+img_foot.style.width ='100%';
 document.body.append(img_foot)
 
 
@@ -197,6 +199,7 @@ footer.style.alignItems = 'center';
 footer.style.backgroundColor = 'black';
 footer.style.color = 'white';
 footer.style.height = '60px';
+footer.style.width = '100%';
 
 document.body.append(footer)
 
