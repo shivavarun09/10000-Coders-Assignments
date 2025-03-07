@@ -10,7 +10,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      border-style: groove;
     }
   
     #img{
@@ -25,7 +24,9 @@
       padding: 4px 8px;
       border-width: none;
       cursor: pointer;
+
     }
+  
   </style>
 </head>
 <body>
@@ -33,7 +34,7 @@
   <div id="img-container">
     <img id="img" style="text-align: center;" src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="">
   </div>
-  <div>
+  <div class="btn-group">
     <button ondblclick="html()">html</button>
     <button ondblclick="css()">css</button>
     <button ondblclick="js()">js</button>
