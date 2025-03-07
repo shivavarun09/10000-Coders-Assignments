@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #img {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+      }
+      button {
+        background-color: black;
+        color: white;
+        margin: 5px;
+        padding: 4px 8px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="img-container">
+        <img
+          id="img"
+          style="text-align: center"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+          alt="HTML Logo"
+        />
+      </div>
+      <div class="btn-group">
+        <button onclick="changeImage(0)">HTML</button>
+        <button onclick="changeImage(1)">CSS</button>
+        <button onclick="changeImage(2)">JavaScript</button>
+        <button onclick="changeImage(3)">React</button>
+      </div>
+    </div>
+    <script>
+      const links = [
+        "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg", // HTML
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/Official_CSS_Logo.svg", // CSS
+        "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg", // JavaScript
+        "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" // React
+      ];
+
+      function changeImage(index) {
+        document.getElementById("img").setAttribute("src", links[index]);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #img {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+      }
+      button {
+        background-color: black;
+        color: white;
+        margin: 5px;
+        padding: 4px 8px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="img-container">
+        <img
+          id="img"
+          style="text-align: center"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+          alt="HTML Logo"
+        />
+      </div>
+      <div class="btn-group">
+        <button onclick="changeImage('html')">HTML</button>
+        <button onclick="changeImage('css')">CSS</button>
+        <button onclick="changeImage('js')">JavaScript</button>
+        <button onclick="changeImage('react')">React</button>
+      </div>
+    </div>
+    <script>
+      const links = {
+        html: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+        css: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Official_CSS_Logo.svg",
+        js: "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg",
+        react: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+      };
+
+      function changeImage(type) {
+        document.getElementById("img").setAttribute("src", links[type]);
+      }
+    </script>
+  </body>
+</html>
