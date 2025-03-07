@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-style: groove;
+    }
+    #img-container{
+      display: block;
+      width: 300px;
+      height: 300px;
+    }
+    #img{
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+    }
+    button{
+      background-color: black;
+      color: white;
+      margin: 5px;
+      padding: 4px 8px;
+      border-width: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div id="img-container">
+    <img id="img" style="text-align: center;" src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="">
+  </div>
+  <div>
+    <button ondblclick="html()">html</button>
+    <button ondblclick="css()">css</button>
+    <button ondblclick="js()">js</button>
+    <button ondblclick="react()">react</button>
+  </div>
+
+</div>
+  <script>
+    function html(){
+      let img = document.getElementById("img");
+      img.setAttribute("src","https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg")
+    }
+    function css(){
+      let img = document.getElementById("img");
+      img.setAttribute("src","https://upload.wikimedia.org/wikipedia/commons/a/ab/Official_CSS_Logo.svg")
+    }
+    function js(){
+      let img = document.getElementById("img");
+      img.setAttribute("src","https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg")
+    }
+    function react(){
+      let img = document.getElementById("img");
+      img.setAttribute("src","https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg")
+    }
+  </script>
+
+</body>
+</html>

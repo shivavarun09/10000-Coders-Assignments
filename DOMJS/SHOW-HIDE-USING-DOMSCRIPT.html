@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.show{
+display: none;
+}
+  </style>
+</head>
+<body>
+  <div id="content">  Some content</div>
+  <button onclick="hide()"> click to hide</button>
+  <button onclick="show()"> click to show</button>
+
+  <script type="text/javascript">
+    function hide(){
+      var div = document.getElementById("content").style.display = 'none';
+    }
+    function show(){
+      var div = document.getElementById("content").style.display = 'block';
+    }
+  </script>
+
+
+
+<!-- Second Way -->
+<div id="content1">  Some content</div>
+<button onclick="hide()">Hide</button>
+<button onclick="show()">show</button>
+<script>
+function hide(){
+let c = document.getElementById("content1");
+c.classList.add("show");
+}
+function show(){
+  let s = document.getElementById("content1");
+  s.classList.remove("show")
+}
+</script>
+
+
+<!-- third Way -->
+<div id="content2">  Some content</div>
+<button onclick="showhide()">Show/Hide TOGGLE</button>
+
+<script>
+  function showhide(){
+    var sh =document.getElementById("content2");
+    sh.classList.toggle("show")
+  }
+</script>
+
+
+</body>
+</html>
