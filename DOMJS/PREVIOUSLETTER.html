@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #textinput{
+      margin: 20px;
+      width: 300px;
+      height: 100px;
+      border-style: groove;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Check Previous letter</h1>
+    <div id="textinput" onclick="getinput()">Click here to Enter text</div>
+  </div>
+  <script>
+function getinput(){
+  var str = document.getElementById("textinput").innerText = prompt("Enter a alphabet letter or string");
+
+
+    const alphabets = ['a','b','c','d','e','f','g','h,','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    let text = document.getElementById("textinput");
+    let textlower = text.innerText.toLowerCase();
+    let textarray = (textlower.split(""))
+    let firstletter = textarray[0];
+    let index = alphabets.indexOf(firstletter);  // indexOf gives index numeric value 
+  
+    console.log(index)
+    if (firstletter == 'a'){
+      text.innerText = `z${text.innerText} Z is previous letter  ${text.innerText} `;
+      let message = document.createElement("p");
+      message.innerText = "Click here to Enter text"
+      message.style.color = "green";
+      text.append(message)
+    }
+    else if(firstletter == alphabets[index]){
+      text.innerText = `${alphabets[index-1]}${text.innerText}   ${alphabets[index-1].toUpperCase()} is previous letter of given string ${text.innerText}`;
+      let message = document.createElement("p");
+      message.innerText = "Click here to Enter text"
+      message.style.color = "green";
+      text.append(message)
+    }
+    else{
+      let message = document.createElement("p");
+      message.innerText = "Invalid Input! Enter alphabet or text"
+      message.style.color = "red";
+      text.append(message)
+
+    }
+console.log(text)
+console.log(textarray)
+console.log(firstletter)
+console.log(alphabets)
+console.log(index)
+  }
+  </script>
+</body>
+</html>
+
