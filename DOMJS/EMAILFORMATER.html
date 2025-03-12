@@ -47,9 +47,9 @@
 
   function Generate() {
     
-    var fname = document.getElementById("fname").value;
-    var lname = document.getElementById("lname").value;
-    if (fname.trim() === "" || lname.trim() === ""){
+    var fname = document.getElementById("fname").value.trim();
+    var lname = document.getElementById("lname").value.trim();
+    if (fname === "" || lname === ""){
       alert("Invalid Input Please enter firstname and lastname");
       
     //  let msg = document.createElement("p");
@@ -63,7 +63,7 @@
 
     let mail = document.getElementById("msg");
     mail.innerText =`${fname}.${lname}@gmail.com`;
-    
+    mail.style.fontStyle= "roman";
     mail.style.textAlign = "center";
     mail.style.color = "green";
     document.body.append(mail)
