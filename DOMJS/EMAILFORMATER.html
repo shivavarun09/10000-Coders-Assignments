@@ -47,8 +47,8 @@
 
   function Generate() {
     
-    var fname = document.getElementById("fname").value.trim();
-    var lname = document.getElementById("lname").value.trim();
+    var fname = document.getElementById("fname").value.trim().toLowerCase();
+    var lname = document.getElementById("lname").value.trim().toLowerCase();
     if (fname === "" || lname === ""){
       alert("Invalid Input Please enter firstname and lastname");
       
