@@ -331,7 +331,7 @@ let products_list =  products.map(product =>{
     let del = document.createElement("button");
     del.innerText= "Delete";
     del.onclick = function(){
-      let res = confirm(`Do you want to delete ${product.title}`)
+      let res = confirm(`${product.title} will be deleted`)
       if(res){
         child.remove();
 
