@@ -4,8 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    #container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .card{
+      border: 1px solid black;
+      border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+    }
+    .card:hover{
+      scale:(1.5);
+    }
+    .rating_style{
+      position: absolute;
+      color: gold;
+      top: 5px;
+      right: 5px;
+    }
+    img{
+      width: 200px;
+      height: 200px;
+      padding: 0.5rem;
+      object-fit: contain;
+      object-position: center;
+    }
+    .name_style{
+      font-size: 1rem;
+      font-weight: 500;
+
+    }
+    .price_style{
+margin: 0.5rem;
+    }
+    .del_style{
+      margin: 1rem;
+      padding: 0.5rem 0.8rem;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .del_style:hover{
+      box-shadow:2px 2px 3px red;
+    }
+    .del_style:active{
+      background-color: white;
+      color: red;
+    }
+  </style>
 </head>
 <body>
+  <div id="container">
+
+  </div>
   <script>
     let products = [
     {
@@ -249,16 +312,34 @@
       }
     }
   ];
-// Creating separate arrays
-const mensClothing = products.filter(product => product.category === "men's clothing");
-const jewelery = products.filter(item => item.category === "jewelery");
-const electronics = products.filter(item => item.category === "electronics");
-const womensClothing = products.filter(item => item.category === "women's clothing");
+let container = document.getElementById("container");
+let products_list =  products.map(product =>{
+    console.log(product.category)
+    let child = document.createElement("div");
+    child.classList.add("card")
+    let image = document.createElement("img");
+    image.src = product.image
+    let image_name = document.createElement("p");
+    image_name.innerText = product.title
+    image_name.classList.add("name_style")
+    let rating = document.createElement("p");
+    rating.innerHTML = `&starf;${product.rating["rate"]} (${product.rating["count"]})`
+    rating.classList.add("rating_style")
+    let price = document.createElement("p");
+    price.innerHTML = `&dollar;${product.price}`;
+    price.classList.add("price_style")
+    let del = document.createElement("button");
+    del.innerText= "Delete";
+    del.onclick = function(){
+      alert(`${product.title} will be Deleted`)
+      child.remove();
+    }
+    del.classList.add("del_style")
+    child.append(image,image_name,rating,price,del)
+    container.append(child)
+    document.body.append(container)
 
-console.log("Men's Clothing:", mensClothing);
-console.log("Jewelery:", jewelery);
-console.log("Electronics:", electronics);
-console.log("women's clothing",womensClothing)
+  });
 
   </script>
 </body>
