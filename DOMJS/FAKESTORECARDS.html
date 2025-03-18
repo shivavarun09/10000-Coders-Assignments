@@ -331,8 +331,11 @@ let products_list =  products.map(product =>{
     let del = document.createElement("button");
     del.innerText= "Delete";
     del.onclick = function(){
-      alert(`${product.title} will be Deleted`)
-      child.remove();
+      let res = confirm(`Do you want to delete ${product.title}`)
+      if(res){
+        child.remove();
+
+      }
     }
     del.classList.add("del_style")
     child.append(image,image_name,rating,price,del)
