@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .child_style{
+      border: 1px solid black;
+      border-radius: 5px;
+      text-align: center;
+      margin: 1rem;
+    }
+    #container{
+      display: grid;
+      grid-template-columns:repeat(auto-fit ,minmax(220px,1fr));
+      gap: 0.5rem;
+    
+    }
+    #buttons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="buttons">
+    <button id="back_btn">Back</button>
+<button id="clear_all">Delete All</button>
+  </div>
+  <div id="container"></div>
+  <script>
+    let back = document.getElementById("back_btn");
+    back.addEventListener("click",event=>{
+      window.open("FORM1.html","_self")
+    });
+    let delall = document.getElementById("clear_all");
+    delall.addEventListener("click",event=>{
+      localStorage.clear();
+      window.location.reload();
+    });
+    let cardDetails = JSON.parse(localStorage.getItem("keys"));
+    console.log(cardDetails)
+let container = document.getElementById("container");
+let card = cardDetails.map(val =>{
+  let child = document.createElement("div");
+  let name = document.createElement("p");
+  let email = document.createElement("p");
+  let del_btn = document.createElement("button");
+  del_btn.innerText = "Delete";
+  del_btn.style.margin = "0.4rem";
+  del_btn.addEventListener("click",event=>{
+    child.remove();
+  })
+  name.style.color= "red";
+  email.style.color= "green";
+  name.innerText = "Name : " + val.name;
+  
+  email.innerText ="Email : "+val.email;
+  child.append(name,email,del_btn)
+  child.classList.add("child_style")
+
+
+container.append(child)
+  console.log(val.name)
+  console.log(val.email)
+})
+document.body.append(container)
+  </script>
+</body>
+</html>

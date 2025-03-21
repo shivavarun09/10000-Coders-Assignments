@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    input{
+      margin: 0.2rem;
+    }
+    #sub_btn{
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 0.3rem 0.4rem;
+      margin: 0.2rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  
+  </style>
+</head>
+<body>
+<div class="container">
+  <form action="" method="post">
+    <button id="reg_user">&#128100;&#9989;</button>
+    <h1>Register here</h1>
+    <input id="username" type="text" placeholder="Enter Your Name" name="Name"><br>
+    <input id="usermail" type="email" placeholder="Enter Your Email" name="Email"><br>
+    <button id="sub_btn" type="button">Submit</button>
+  </form>
+</div>
+
+<script>
+let formcards = document.getElementById("reg_user");
+formcards.addEventListener("click",event=>{
+window.open("FORMCARDS.html","_blank")
+})
+let button = document.getElementById("sub_btn");
+button.addEventListener("click", (event) => {
+  event.preventDefault();
+  let nameInput = document.getElementById("username");
+  let mailInput = document.getElementById("usermail");
+  let name = nameInput.value.trim();
+  let mail = mailInput.value.trim();
+  
+  if (name === "" || mail === "") {
+    alert("Please enter both name and email");
+    return;
+  }
+  
+  let userdetails = {"name": name, "email": mail}; //creating userdetails object to store name and mail
+  let usersArray = JSON.parse(localStorage.getItem("keys")) || [];  //initializing usersArray to previous localstorage if have any or empty
+  usersArray.push(userdetails); // pushing userdetails into usersArray 
+  localStorage.setItem("keys", JSON.stringify(usersArray)); //  Passing userAraay to JSON 
+  
+  alert("Datails saved successfully! Thank you.");
+  console.log("User saved:", userdetails); 
+  console.log("Updated users list:", usersArray); 
+  
+  nameInput.value = ""; //clearing input fields values
+  mailInput.value = ""; //clearing input fields values
+});
+</script>
+</body>
+</html>
