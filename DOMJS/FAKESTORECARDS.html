@@ -12,7 +12,7 @@
     }
     #container{
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(330px,1fr));
       gap: 1rem;
       padding: 1rem;
     }
@@ -22,7 +22,7 @@
     text-align: center;
     position: relative;
     box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
-    transition: all ease 20ms;
+    transition: all ease 300ms;
     }
     .card:hover{
       transform: scale(1.02)
@@ -51,7 +51,7 @@ margin: 0.5rem;
     .del_style{
       margin: 1rem;
       padding: 0.5rem 0.8rem;
-      background-color: red;
+      background-color: green;
       color: white;
       border: none;
       border-radius: 8px;
@@ -63,9 +63,40 @@ margin: 0.5rem;
       background-color: white;
       color: red;
     }
+    nav{
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem;
+    }
+  .back,.delall,.home{
+    padding: 0.3rem 0.5rem;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  a{
+    text-decoration: none;
+  }
+  .viewcartcount{
+background-color: white;
+color: green;
+padding: 0.15rem 0.25rem;
+border-radius: 5px;
+  }
   </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <div>  <a href="FAKESTORECARDS.html"> MyStore</a> </div>
+      <div>
+      <a href="VIEWCART.html"><button class="back">View Cart <span id="noofcartitems">0</span></button>  </a>
+  </div>
+    </nav>
+  </header>
   <div id="container">
 
   </div>
@@ -323,19 +354,25 @@ let products_list =  products.map(product =>{
     image_name.innerText = product.title
     image_name.classList.add("name_style")
     let rating = document.createElement("p");
-    rating.innerHTML = `&starf;${product.rating["rate"]} (${product.rating["count"]})`
+    let star_count =Math.ceil(product.rating["rate"]);
+    let star ="";
+    for(let i = 1; i<= star_count;i++){
+star += "★";
+    }
+    rating.innerHTML = `${star} ${product.rating["rate"]}(${product.rating["count"]})`;
     rating.classList.add("rating_style")
     let price = document.createElement("p");
     price.innerHTML = `&dollar;${product.price}`;
     price.classList.add("price_style")
     let del = document.createElement("button");
-    del.innerText= "Delete";
+    del.innerText= "Add to Cart";
     del.onclick = function(){
-      let res = confirm(`${product.title} will be deleted`)
-      if(res){
-        child.remove();
-
-      }
+      alert(`${product.title} will be added to your cart!`)
+  let cartarray = JSON.parse(localStorage.getItem("cart")) || [];
+  cartarray.push(product);
+  
+  localStorage.setItem("cart",JSON.stringify(cartarray));
+  location.reload()
     }
     del.classList.add("del_style")
     child.append(image,image_name,rating,price,del)
@@ -344,6 +381,12 @@ let products_list =  products.map(product =>{
 
   });
 
+  let cartlength = JSON.parse(localStorage.getItem("cart"));
+
+  let noofcartitems = document.getElementById("noofcartitems");
+  noofcartitems.classList.add("viewcartcount");
+  noofcartitems.innerHTML = `${cartlength.length}`;
+  
   </script>
 </body>
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List</title>
+  <style>
+    /* Added basic styling for better presentation */
+    #container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .item-card {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 5px;
+    }
+    img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: contain;
+    }
+    #addtocart {
+      padding: 0.5rem 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #addtocart:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <!-- Added container div in HTML instead of creating it dynamically -->
+  <div id="container"></div>
+
+  <script>
+    async function fetchData() {
+      try {
+        const response = await fetch("https://fakestoreapi.com/products");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const apidata = await response.json();
+        console.log(apidata);
+
+        // Get container once, outside the loop
+        const container = document.getElementById("container");
+
+        apidata.forEach(item => {
+          // Create a card for each item
+          const child = document.createElement("div");
+          child.className = "item-card"; // Added class for styling
+
+          // Use template literal for cleaner HTML structure
+          child.innerHTML = `
+            <img src="${item.image}" alt="${item.title}">
+            <h2 id="itemtitle">${item.title}</h2>
+            <p id="itemprice">$${item.price}</p>
+            <p id="itemrating">Rating: ${item.rating.rate} (${item.rating.count} reviews)</p>
+            <button id="addtocart" onclick="addToCart(${item.id})">Add to Cart</button>
+          `;
+
+          // Append the child to container
+          container.appendChild(child);
+
+          // Log item details for debugging
+          console.log({
+            id: item.id,
+            title: item.title,
+            price: item.price,
+            description: item.description,
+            image: item.image,
+            rating: `${item.rating.rate}, ${item.rating.count}`
+          });
+        });
+      } catch (error) {
+        console.error("Error while fetching data from API:", error);
+      }
+    }
+
+    
+    // Declare apidata globally so addToCart can access it
+    let apidata = null;
+    
+    // Call the fetch function
+    fetchData()
+  </script>
+</body>
+</html> 

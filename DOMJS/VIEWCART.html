@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    #container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px,1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .card{
+      border: 1px solid black;
+      border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+    transition: all ease 300ms;
+    }
+    .card:hover{
+      transform: scale(1.02)
+    }
+    .rating_style{
+      position: absolute;
+      color: gold;
+      top: 5px;
+      right: 5px;
+    }
+    img{
+      width: 200px;
+      height: 200px;
+      padding: 0.5rem;
+      object-fit: contain;
+      object-position: center;
+    }
+    .name_style{
+      font-size: 1rem;
+      font-weight: 500;
+
+    }
+    .price_style{
+margin: 0.5rem;
+    }
+    .del_style{
+      margin: 1rem;
+      padding: 0.5rem 0.8rem;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+    .del_style:hover{
+      cursor: pointer;
+    }
+    .del_style:active{
+      background-color: white;
+      color: red;
+    }
+  nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+  }
+.back,.delall,.home{
+  padding: 0.3rem 0.5rem;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+}
+
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <div>  <a href="FAKESTORECARDS.html"> MyStore</a> </div>
+    <div>
+    <a href="FAKESTORECARDS.html"><button class="back">Back</button>  </a>
+      <button class="delall" onclick="fun()">Delete cart Items</button>
+</div>
+  </nav>
+</header>
+
+
+  <div id="container">
+  </div>
+  <script>
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || []; // Added fallback for empty cart
+    let container = document.getElementById("container"); 
+
+console.log(cart);
+if (cart.length === 0)
+{
+container.innerText = "Cart is Empty" ;
+}
+const cart_list = cart.map(product => {
+    console.log(product.category);
+    let child = document.createElement("div");
+    child.classList.add("card");
+    
+    let image = document.createElement("img");
+    image.src = product.image;
+    
+    let image_name = document.createElement("p");
+    image_name.innerText = product.title;
+    image_name.classList.add("name_style");
+    let star_count =Math.ceil(product.rating["rate"]);
+    let star ="";
+    for(let i = 1; i<= star_count;i++){
+star += "★";
+    }
+    let rating = document.createElement("p");
+    rating.innerHTML = `${star} ${product.rating["rate"]}(${product.rating["count"]})`;
+    rating.classList.add("rating_style");
+    
+    let price = document.createElement("p");
+    price.innerHTML = `$${product.price}`;
+    price.classList.add("price_style");
+    
+    let del = document.createElement("button");
+    del.innerText = "Delete From Cart";
+    del.onclick = function() {
+      let userinput = confirm(`${product.title} will be deleted from your cart!`);
+      if (userinput) {
+          const index = cart.findIndex(item => item.title === product.title);
+          if (index !== -1) {
+              cart.splice(index, 1);  // Remove 1 item at found index
+              localStorage.setItem("cart", JSON.stringify(cart));
+              child.remove();
+              location.reload()
+          }
+      }
+  };
+    del.classList.add("del_style");
+    
+    child.append(image, image_name, rating, price, del);  // appending all properties to child div
+    container.append(child);
+    });
+
+// Append container to body once after all items are added
+document.body.append(container);
+
+function fun() {
+    localStorage.clear();
+    location.reload()
+}
+  </script>
+</body>
+</html>
