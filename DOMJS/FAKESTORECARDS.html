@@ -9,6 +9,8 @@
       padding: 0;
       margin: 0;
       box-sizing: border-box;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
     }
     #container{
       display: grid;
@@ -63,10 +65,17 @@ margin: 0.5rem;
       background-color: white;
       color: red;
     }
-    nav{
+    .navbar{
       display: flex;
       justify-content: space-between;
+      align-items: center;
       margin: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      background-color: white;
+      height: 60px;
+      max-width: 100%;
     }
   .back,.delall,.home{
     padding: 0.3rem 0.5rem;
@@ -86,16 +95,17 @@ color: green;
 padding: 0.15rem 0.25rem;
 border-radius: 5px;
   }
+
   </style>
 </head>
 <body>
-  <header>
-    <nav>
+  <header class="navbar">
+    
       <div>  <a href="FAKESTORECARDS.html"> MyStore</a> </div>
       <div>
       <a href="VIEWCART.html"><button class="back">View Cart <span id="noofcartitems">0</span></button>  </a>
   </div>
-    </nav>
+    
   </header>
   <div id="container">
 
