@@ -155,8 +155,13 @@ star += "★";
 document.body.append(container);
 
 function fun() {
-    localStorage.clear();
+
+let userinput =  confirm("All items in your will be deleted");
+if(userinput){
+  localStorage.clear();
     location.reload()
+}
+
 }
   </script>
 </body>

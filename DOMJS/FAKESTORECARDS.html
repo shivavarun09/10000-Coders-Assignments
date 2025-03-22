@@ -367,12 +367,14 @@ star += "★";
     let del = document.createElement("button");
     del.innerText= "Add to Cart";
     del.onclick = function(){
-      alert(`${product.title} will be added to your cart!`)
-  let cartarray = JSON.parse(localStorage.getItem("cart")) || [];
-  cartarray.push(product);
-  
-  localStorage.setItem("cart",JSON.stringify(cartarray));
-  location.reload()
+  let userinput =   confirm(`${product.title} will be added to your cart!`);
+  if(userinput){
+    let cartarray = JSON.parse(localStorage.getItem("cart")) || [];
+    cartarray.push(product);
+    
+    localStorage.setItem("cart",JSON.stringify(cartarray));
+    location.reload()
+  }
     }
     del.classList.add("del_style")
     child.append(image,image_name,rating,price,del)
